@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuietStrength • Community</title>
+  <meta name="description" content="A simple, moderated message board simulation for encouragement.">
+  <link rel="stylesheet" href="css/quitestrength.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+<main class="container">
+  <div class="page-title">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Community</div>
+    <h1>Community Message Board</h1>
+    <p class="muted">This is a <strong>local-only simulation</strong>. Posts save on the user’s device (localStorage). No accounts, no public posting.</p>
+  </div>
+
+  <section class="section">
+    <div class="grid two">
+      <div class="card board">
+        <h2 style="margin-top:0;">Share encouragement</h2>
+        <p class="muted small">Keep it kind, supportive, and non-graphic. No personal addresses or private info.</p>
+
+        <form id="boardForm">
+          <div>
+            <label for="name">Name (optional)</label>
+            <input class="input" id="name" name="name" maxlength="40" placeholder="Anonymous is okay">
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" maxlength="900" placeholder="Write something supportive or helpful..."></textarea>
+          </div>
+
+          <div class="topic-actions">
+            <button class="btn primary" type="submit">Post message</button>
+            <button class="btn ghost" type="button" id="clearPosts">Clear posts (this device)</button>
+          </div>
+        </form>
+
+        <div class="help-callout" style="margin-top:1rem;">
+          <strong>In crisis?</strong> Visit <a href="help.html">Get Help</a> for 988 and other resources.
+        </div>
+      </div>
+
+      <div class="card board">
+        <h2 style="margin-top:0;">Recent posts</h2>
+        <div id="postList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card pad">
+      <h2 style="margin-top:0;">Community guidelines (short)</h2>
+      <ul class="muted">
+        <li>Be respectful and supportive.</li>
+        <li>No hate, harassment, or graphic descriptions.</li>
+        <li>No medical instructions — encourage professional help when needed.</li>
+        <li>If you see a crisis situation, direct people to <a href="help.html">Get Help</a>.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+  <div id="siteFooter"></div>
+  <script src="script/main.js"></script>
+</body>
+</html>
